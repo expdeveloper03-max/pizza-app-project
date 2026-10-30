@@ -1,0 +1,221 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizza Haven - Menu</title>
+    <link rel="stylesheet" href="pizza.css">
+    <link rel="stylesheet" href="menu.css">
+</head>
+<body>
+    <header class="navbar">
+        <div class="logo">Pizza<span>Slice</span></div>
+        <nav class="nav-links">
+            <a href="pizzaproject.html">Home</a>
+            <a href="menu.html" class="active">Menu</a>
+            <a href="deals.html">Deals</a>
+            <a href="trackorders.html">Track Orders</a>
+        </nav>
+    </header>
+
+    <main class="menu-page">
+        <section class="menu-hero">
+            <h1>Our Menu</h1>
+            <p class="subtitle">Fresh dough, bold toppings, baked to order.</p>
+        </section>
+
+        <div class="menu-wrap">
+            <input type="radio" name="category" id="cat-all" checked>
+            <input type="radio" name="category" id="cat-classic">
+            <input type="radio" name="category" id="cat-gourmet">
+            <input type="radio" name="category" id="cat-deep">
+            <input type="radio" name="category" id="cat-meat">
+            <input type="radio" name="category" id="cat-veggie">
+
+            <div class="menu-filters" role="group" aria-label="Filter by category">
+                <label for="cat-all">All</label>
+                <label for="cat-classic">Classic and Traditional</label>
+                <label for="cat-gourmet">Gourmet and Signature</label>
+                <label for="cat-deep">Deep Dish and Pan</label>
+                <label for="cat-meat">Meat Lovers Feast</label>
+                <label for="cat-veggie">Veggie and Plant-Based</label>
+            </div>
+
+            <section class="menu-grid">
+                <article class="menu-card" data-cat="classic">
+                    <div class="menu-media">
+                        <img src="Pizza-Margheritta.webp" alt="margherita pizza" loading="lazy">
+                    </div>
+                    <div class="menu-body">
+                        <h3>Margherita</h3>
+                        <p>San Marzano tomato, fresh mozzarella, basil, olive oil.</p>
+                        <div class="menu-foot">
+                            <span class="menu-price">20gh</span>
+                            <a href="#" class="menu-btn">Add to cart</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="menu-card" data-cat="classic">
+                    <div class="menu-media">
+                         
+                        <img src="pepperoni-pizza.jpg" alt="Pepperoni pizza" loading="lazy">
+                    </div>
+                    <div class="menu-body">
+                        <h3>Pepperoni Classic</h3>
+                        <p>Mozzarella and crisp-edge pepperoni on tomato sauce.</p>
+                        <div class="menu-foot">
+                            <span class="menu-price">20gh</span>
+                            <a href="#" class="menu-btn">Add to cart</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="menu-card" data-cat="classic">
+                    <div class="menu-media">
+                        <img src="four-cheese.jpg" alt="Four cheese pizza" loading="lazy">
+                    </div>
+                    <div class="menu-body">
+                        <h3>Four Cheese</h3>
+                        <p>Mozzarella, cheddar, parmesan, and gorgonzola.</p>
+                        <div class="menu-foot">
+                            <span class="menu-price">20gh</span>
+                            <a href="#" class="menu-btn">Add to cart</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="menu-card" data-cat="gourmet">
+                    <div class="menu-media">
+                        
+                        <img src="mushroom-pizza.jpg" alt="Truffle mushroom pizza" loading="lazy">
+                    </div>
+                    <div class="menu-body">
+                        <h3>Truffle Mushroom</h3>
+                        <p>Wild mushrooms, truffle cream, thyme, and parmesan.</p>
+                        <div class="menu-foot">
+                            <span class="menu-price">20gh</span>
+                            <a href="#" class="menu-btn">Add to cart</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="menu-card" data-cat="gourmet">
+                    <div class="menu-media">
+                        <img src="proscito.jpg" alt="Prosciutto and arugula pizza" loading="lazy">
+                    </div>
+                    <div class="menu-body">
+                        <h3>Prosciutto Arugula</h3>
+                        <p>Prosciutto, fresh arugula, shaved parmesan, balsamic glaze.</p>
+                        <div class="menu-foot">
+                            <span class="menu-price">20gh</span>
+                            <a href="#" class="menu-btn">Add to cart</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="menu-card" data-cat="gourmet">
+                    <div class="menu-media">
+                         
+                        <img src="hot honey.jpg" alt="Hot honey salami pizza" loading="lazy">
+                    </div>
+                    <div class="menu-body">
+                        <h3>Hot Honey Salami</h3>
+                        <p>Spicy salami, chili flakes, mozzarella, and a honey drizzle.</p>
+                        <div class="menu-foot">
+                            <span class="menu-price">20gh</span>
+                            <a href="#" class="menu-btn">Add to cart</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="menu-card" data-cat="deep">
+                    <div class="menu-media">
+                        <img src="chicago pizza.jpg" alt="Chicago deep dish pizza" loading="lazy">
+                    </div>
+                    <div class="menu-body">
+                        <h3>Chicago Deep Dish</h3>
+                        <p>Buttery crust, layered cheese, sausage, and chunky tomato.</p>
+                        <div class="menu-foot">
+                            <span class="menu-price">20gh</span>
+                            <a href="#" class="menu-btn">Add to cart</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="menu-card" data-cat="deep">
+                    <div class="menu-media">
+                        <img src="detroit.webp" alt="Detroit style pan pizza" loading="lazy">
+                    </div>
+                    <div class="menu-body">
+                        <h3>Detroit Pan</h3>
+                        <p>Caramelized cheese edges, pepperoni, and sauce on top.</p>
+                        <div class="menu-foot">
+                            <span class="menu-price">20gh</span>
+                            <a href="#" class="menu-btn">Add to cart</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="menu-card" data-cat="meat">
+                    <div class="menu-media">
+                         
+                        <img src="meatlover.jpg" alt="Meat lovers pizza" loading="lazy">
+                    </div>
+                    <div class="menu-body">
+                        <h3>Meat Lovers</h3>
+                        <p>Pepperoni, sausage, bacon, ham, and ground beef.</p>
+                        <div class="menu-foot">
+                            <span class="menu-price">20gh</span>
+                            <a href="#" class="menu-btn">Add to cart</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="menu-card" data-cat="meat">
+                    <div class="menu-media">
+                        <img src="chickenpiz.jpg" alt="BBQ chicken pizza" loading="lazy">
+                    </div>
+                    <div class="menu-body">
+                        <h3>BBQ Chicken Smash</h3>
+                        <p>Grilled chicken, bacon, red onion, BBQ sauce, mozzarella.</p>
+                        <div class="menu-foot">
+                            <span class="menu-price">20gh</span>
+                            <a href="#" class="menu-btn">Add to cart</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="menu-card" data-cat="veggie">
+                    <div class="menu-media">
+                        <img src="viggies.jpg" alt="Garden veggie pizza" loading="lazy">
+                    </div>
+                    <div class="menu-body">
+                        <h3>Garden Veggie</h3>
+                        <p>Peppers, mushrooms, olives, onion, and tomato.</p>
+                        <div class="menu-foot">
+                            <span class="menu-price">20gh</span>
+                            <a href="#" class="menu-btn">Add to cart</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="menu-card" data-cat="veggie">
+                    <div class="menu-media">
+                        <span class="menu-tag"></span>
+                        <img src="vegan.jpg" alt="Vegan pesto pizza" loading="lazy">
+                    </div>
+                    <div class="menu-body">
+                        <h3>Vegan Pesto</h3>
+                        <p>Basil pesto, plant-based cheese, zucchini, cherry tomato.</p>
+                        <div class="menu-foot">
+                            <span class="menu-price">20gh</span>
+                            <a href="#" class="menu-btn">Add to cart</a>
+                        </div>
+                    </div>
+                </article>
+            </section>
+        </div>
+    </main>
+</body>
+</html>

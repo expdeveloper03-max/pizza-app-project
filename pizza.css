@@ -1,0 +1,244 @@
+  *{
+     
+    padding: 0;
+     
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+ 
+
+body {
+    background-color: hsl(147, 54%, 85%);
+    color: #333333;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+     
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: 800;
+    color: #2c3e50;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.logo span {
+     color:  #3ce792; 
+}
+
+
+.nav-links a {
+    text-decoration: none;
+    color: black;
+    font-weight: 600;
+    margin-left: 25px;
+    transition: color 0.3s ease;
+    position: relative;
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: 600;
+    text-align: center;
+    width: 110px;
+    border-radius: 20px;
+    
+
+}
+
+ .nav-links a:hover,
+.nav-links a.active {
+    color:  #3ce792;
+  
+}
+
+
+.hero {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.hero-content h1 {
+    font-size: 42px;
+    color: #0f1f30;
+    margin-bottom: 12px;
+    font-weight: 800;
+}
+
+.hero-content .subtitle {
+    font-size: 18px;
+    color: #7f8c8d;
+    margin-bottom: 35px;
+}
+
+
+.search-box {
+    display: inline-flex;
+    align-items: center;
+    background: #ffffff;
+    border: 2px solid #ebdcd3;
+    border-radius: 50px;
+    padding: 6px 6px 6px 20px;
+    width: 100%;
+    max-width: 650px;
+    box-shadow: 0 8px 24px rgba(231, 76, 60, 0.06);
+    transition: box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.search-box:focus-within {
+    border-color: #3ce792;
+    box-shadow: 0 8px 24px rgba(231, 76, 60, 0.15);
+}
+
+.search-icon {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    background: url() no-repeat center;
+}
+
+.search-box input {
+    border: none;
+    outline: none;
+    width: 100%;
+    font-size: 16px;
+    color: #333333;
+}
+
+.search-box input::placeholder {
+    color: #b0b0b0;
+}
+
+.search-btn {
+    background-color: #3ce792;
+    color: #ffffff;
+    border: none;
+    outline: none;
+    padding: 14px 32px;
+    border-radius: 50px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+ .search-btn:hover {
+    background-color: #3ce792;
+}
+
+
+.explore-section {
+    margin-top: 80px;
+    text-align: left;
+}
+
+.explore-section h2 {
+    text-align: center;
+    font-size: 26px;
+    color: #2c3e50;
+    margin-bottom: 30px;
+    font-weight: 700;
+    position: relative;
+}
+
+
+.category-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 24px;
+}
+
+
+.category-card {
+    position: relative;
+    height: 300px;
+    border-radius: 16px;
+     overflow: hidden;
+     background-color: #e0e0e0; 
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    cursor: pointer;
+    transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94), box-shadow 0.3s ease;
+}
+
+.category-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12);
+}
+
+.category-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.category-card:hover img {
+    transform: scale(1.08);
+}
+
+
+.card-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.2) 60%, rgba(0, 0, 0, 0) 100%);
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding: 20px;
+    color: #ffffff;
+}
+
+.card-overlay span {
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 0.3px;
+    padding-right: 10px;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+.arrow-btn {
+    width: 36px;
+    height: 36px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    backdrop-filter: blur(4px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.arrow-btn::after {
+    content: '';
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border-top: 2px solid #ffffff;
+    border-right: 2px solid #ffffff;
+    transform: rotate(45deg);
+    margin-right: 2px;
+}
+
+.category-card:hover .arrow-btn {
+    background-color: #3ce792;
+    transform: scale(1.1);
+}
+
+
