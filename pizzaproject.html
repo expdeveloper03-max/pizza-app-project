@@ -1,82 +1,177 @@
- <!DOCTYPE html>
+  <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pizza Haven - Order Online</title>
+    <meta name="description" content="Find your favorite slice at PizzaSlice. Browse classic, gourmet, deep dish, meat lovers and veggie pizzas, find a deal, and order online.">
+    <title>PizzaSlice — Your neighborhood pizza spot</title>
+
+    <!-- Free emoji favicon, no image file needed -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🍕</text></svg>">
+
+    <!-- Optional free font (Poppins). Remove these two lines to use the fallback fonts. -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap">
+
     <link rel="stylesheet" href="pizza.css">
 </head>
 <body>
-    <header class="navbar">
-        <div class="logo">Pizza<span>Slice</span></div>
+    <a class="skip-link" href="#main">Skip to main content</a>
 
-        <nav class="nav-links">
-            <a href="#" class="active">Home</a>
+    <header class="navbar">
+        <a href="pizzaproject.html" class="logo">Pizza<span>Slice</span></a>
+
+        <nav class="nav-links" aria-label="Main navigation">
+            <a href="pizzaproject.html" class="active" aria-current="page">Home</a>
             <a href="menu.html">Menu</a>
             <a href="deals.html">Deals</a>
             <a href="trackorders.html">Track Orders</a>
         </nav>
     </header>
 
-    <main class="hero container">
-        <section class="hero-content">
-            <h1>Book Unforgettable Flavors</h1>
-            <p class="subtitle">
-                Compare crusts, toppings, and deals from local pizzerias across the city
-            </p>
+    <main id="main">
+        <!-- HERO -->
+        <section class="hero">
+            <div class="container hero-content">
+                <div class="hero-copy">
+                    <p class="hero-eyebrow"><span aria-hidden="true">✦</span> GOOD PIZZA. GOOD MOOD.</p>
+                    <h1>Good pizza. <span>Better evenings.</span></h1>
+                    <p class="subtitle">
+                        Pick a favorite, get comfortable, and let the oven do the talking.
+                    </p>
 
-            <form class="search-box" action="#">
-                <span class="search-icon" aria-hidden="true"></span>
-                <input type="text" name="query" placeholder="Search pizzas, toppings, ingredients, or deals...">
-                <button type="submit" class="search-btn">Search</button>
-            </form>
-        </section>
+                    <form class="search-box" action="menu.html" method="get" role="search">
+                        <span class="search-icon" aria-hidden="true"></span>
+                        <input type="search" name="query" aria-label="Search pizzas, toppings or deals"
+                               placeholder="Search pizzas & toppings">
+                        <button type="submit" class="search-btn">Find a slice</button>
+                    </form>
 
-        <section class="explore-section">
-            <h2>What do you want to explore?</h2>
-
-            <div class="category-grid">
-                <div class="category-card">
-                    <img src="ppppp.webp" alt="Classic and Traditional Pizzas">
-                    <div class="card-overlay">
-                        <span>Classic and Traditional</span>
-                        <div class="arrow-btn"></div>
+                    <div class="hero-actions">
+                        <a href="menu.html" class="btn btn-primary">Order Now <span aria-hidden="true">↗</span></a>
+                        <a href="deals.html" class="btn btn-outline">View Deals</a>
+                    </div>
+                    <div class="hero-promises" aria-label="What makes our pizza special">
+                        <span><span aria-hidden="true">✓</span> Made to order</span>
+                        <span><span aria-hidden="true">✓</span> Oven-hot delivery</span>
                     </div>
                 </div>
 
-                <div class="category-card">
-                    <img src="pizz.jpg" alt="Gourmet and Signature Pizzas">
-                    <div class="card-overlay">
-                        <span>Gourmet and Signature</span>
-                        <div class="arrow-btn"></div>
-                    </div>
-                </div>
-
-                <div class="category-card">
-                    <img src="Deep-Dish-Pizza-1200-x-1200.jpg" alt="Deep Dish and Pan Pizzas">
-                    <div class="card-overlay">
-                        <span>Deep Dish and Pan</span>
-                        <div class="arrow-btn"></div>
-                    </div>
-                </div>
-
-                <div class="category-card">
-                    <img src="Meat-Lovers-Pizza-8.jpeg" alt="Meat Lovers Feast">
-                    <div class="card-overlay">
-                        <span>Meat Lovers Feast</span>
-                        <div class="arrow-btn"></div>
-                    </div>
-                </div>
-
-                <div class="category-card">
-                    <img src="images (1).jpg" alt="Veggie and Plant-Based Options">
-                    <div class="card-overlay">
-                        <span>Veggie and Plant-Based</span>
-                        <div class="arrow-btn"></div>
+                <div class="hero-visual">
+                    <img src="Pizza-Margheritta.webp" alt="Fresh Margherita pizza topped with basil" fetchpriority="high">
+                    <div class="hero-badge">
+                        <span>THE HOUSE FAVORITE</span>
+                        <strong>Margherita, made right.</strong>
                     </div>
                 </div>
             </div>
         </section>
+
+        <!-- CATEGORIES -->
+        <section class="container explore-section" aria-labelledby="explore-heading">
+            <p class="section-kicker">THE MENU, YOUR WAY</p>
+            <h2 id="explore-heading">Pick your pizza personality.</h2>
+
+            <div class="category-grid">
+                <a class="category-card" href="menu.html#classic">
+                    <img src="ppppp.webp" alt="Classic and traditional pizza" loading="lazy">
+                    <div class="card-overlay">
+                        <span>Classic and Traditional</span>
+                        <div class="arrow-btn" aria-hidden="true"></div>
+                    </div>
+                </a>
+
+                <a class="category-card" href="menu.html#gourmet">
+                    <img src="pizz.jpg" alt="Gourmet and signature pizza" loading="lazy">
+                    <div class="card-overlay">
+                        <span>Gourmet and Signature</span>
+                        <div class="arrow-btn" aria-hidden="true"></div>
+                    </div>
+                </a>
+
+                <a class="category-card" href="menu.html#deep-dish">
+                    <img src="Deep-Dish-Pizza-1200-x-1200.jpg" alt="Deep dish and pan pizza" loading="lazy">
+                    <div class="card-overlay">
+                        <span>Deep Dish and Pan</span>
+                        <div class="arrow-btn" aria-hidden="true"></div>
+                    </div>
+                </a>
+
+                <a class="category-card" href="menu.html#meat-lovers">
+                    <img src="Meat-Lovers-Pizza-8.jpeg" alt="Meat lovers feast pizza" loading="lazy">
+                    <div class="card-overlay">
+                        <span>Meat Lovers Feast</span>
+                        <div class="arrow-btn" aria-hidden="true"></div>
+                    </div>
+                </a>
+
+                <a class="category-card" href="menu.html#veggie">
+                    <!-- Tip: rename "images (1).jpg" to something like veggie-pizza.jpg (no spaces) -->
+                    <img src="images%20(1).jpg" alt="Veggie and plant-based pizza" loading="lazy">
+                    <div class="card-overlay">
+                        <span>Veggie and Plant-Based</span>
+                        <div class="arrow-btn" aria-hidden="true"></div>
+                    </div>
+                </a>
+            </div>
+        </section>
+
+        <section class="container house-pick" aria-labelledby="house-pick-heading">
+            <div class="house-pick-image">
+                <img src="hot%20honey.jpg" alt="Hot honey pizza with golden cheese and salami" loading="lazy">
+                <span class="house-pick-stamp">SWEET<br>MEETS<br>HEAT</span>
+            </div>
+            <div class="house-pick-copy">
+                <p class="section-kicker">A LITTLE SOMETHING DIFFERENT</p>
+                <h2 id="house-pick-heading">Hot honey. Crispy edges. No leftovers.</h2>
+                <p>Spicy salami, melty mozzarella, and a drizzle of honey. The Hot Honey Salami is a little sweet, a little fiery, and very hard to share.</p>
+                <a class="house-pick-link" href="menu.html#hot-honey">Meet the Hot Honey Salami <span aria-hidden="true">↗</span></a>
+            </div>
+        </section>
+
+        <!-- WHY US -->
+        <section class="container features" aria-labelledby="why-heading">
+            <h2 id="why-heading" class="section-title">The good stuff, baked in.</h2>
+            <p class="section-subtitle">Simple, fast and made to order.</p>
+
+            <div class="feature-grid">
+                <div class="feature">
+                    <div class="feature-icon" aria-hidden="true">🍕</div>
+                    <h3>Fresh Ingredients</h3>
+                    <p>Hand-stretched dough and toppings prepared the same day.</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon" aria-hidden="true">🛵</div>
+                    <h3>Fast Delivery</h3>
+                    <p>Hot to your door, with live order tracking.</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon" aria-hidden="true">💸</div>
+                    <h3>Great Deals</h3>
+                    <p>Combos and weekly offers that keep the bill friendly.</p>
+                </div>
+            </div>
+        </section>
     </main>
+
+    <footer class="footer">
+        <div class="footer-grid">
+            <div>
+                <h4>PizzaSlice</h4>
+                <p>Fresh pizza, honest prices, delivered hot.</p>
+            </div>
+            <div>
+                <h4>Explore</h4>
+                <a href="menu.html">Menu</a>
+                <a href="deals.html">Deals</a>
+                <a href="trackorders.html">Track Orders</a>
+            </div>
+            <div>
+                <h4>Hours</h4>
+                <p>Open daily, lunch to late night.</p>
+            </div>
+        </div>
+        <p class="footer-bottom">&copy; 2026 PizzaSlice. All rights reserved.</p>
+    </footer>
 </body>
 </html>
