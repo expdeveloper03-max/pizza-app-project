@@ -1,30 +1,45 @@
- <!DOCTYPE html>
+  <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pizza Haven - Menu</title>
+    <meta name="description" content="Explore the PizzaSlice menu: classic favorites, signature pizzas, deep dish, meat lovers, and plant-based pies baked to order.">
+    <title>PizzaSlice Menu — Find your next favorite</title>
     <link rel="stylesheet" href="pizza.css">
     <link rel="stylesheet" href="menu.css">
 </head>
 <body>
+    <a class="skip-link" href="#main">Skip to main content</a>
+
     <header class="navbar">
-        <div class="logo">Pizza<span>Slice</span></div>
-        <nav class="nav-links">
+        <a href="pizzaproject.html" class="logo">Pizza<span>Slice</span></a>
+        <nav class="nav-links" aria-label="Main navigation">
             <a href="pizzaproject.html">Home</a>
-            <a href="menu.html" class="active">Menu</a>
+            <a href="menu.html" class="active" aria-current="page">Menu</a>
             <a href="deals.html">Deals</a>
             <a href="trackorders.html">Track Orders</a>
         </nav>
     </header>
 
-    <main class="menu-page">
+    <main id="main">
         <section class="menu-hero">
-            <h1>Our Menu</h1>
-            <p class="subtitle">Fresh dough, bold toppings, baked to order.</p>
+            <div class="menu-hero-inner container">
+                <p class="menu-eyebrow">THE PIZZAS</p>
+                <h1>Every craving has <span>a slice.</span></h1>
+                <p class="subtitle">Fresh dough, bold toppings, baked to order. Pick your mood; we’ll bring the good stuff.</p>
+                <a class="menu-hero-link" href="deals.html">Hungry for a deal? <span>See what’s on special ↗</span></a>
+            </div>
         </section>
 
-        <div class="menu-wrap">
+        <div class="menu-wrap container">
+            <div class="menu-intro">
+                <div>
+                    <p class="menu-eyebrow">MADE FRESH, EVERY TIME</p>
+                    <h2>Find your next favorite.</h2>
+                </div>
+                <p>12 pizzas <span aria-hidden="true">·</span> zero wrong choices</p>
+            </div>
+
             <input type="radio" name="category" id="cat-all" checked>
             <input type="radio" name="category" id="cat-classic">
             <input type="radio" name="category" id="cat-gourmet">
@@ -41,32 +56,40 @@
                 <label for="cat-veggie">Veggie and Plant-Based</label>
             </div>
 
-            <section class="menu-grid">
-                <article class="menu-card" data-cat="classic">
+            <section class="menu-grid" aria-label="Pizzas">
+
+                <article class="menu-card" data-cat="classic" id="classic">
                     <div class="menu-media">
-                        <img src="Pizza-Margheritta.webp" alt="margherita pizza" loading="lazy">
+                        <img src="Pizza-Margheritta.webp" alt="Margherita pizza" loading="lazy">
                     </div>
                     <div class="menu-body">
                         <h3>Margherita</h3>
                         <p>San Marzano tomato, fresh mozzarella, basil, olive oil.</p>
                         <div class="menu-foot">
-                            <span class="menu-price">20gh</span>
-                            <a href="#" class="menu-btn">Add to cart</a>
+                            <span class="menu-price">GH₵20</span>
+                            <input class="pizza-choice" type="checkbox" id="choose-margherita">
+                            <label class="pizza-choice-button" for="choose-margherita">
+                                <span class="choose-label">Add to cart</span>
+                                <span class="chosen-label">Added ✓</span>
+                            </label>
                         </div>
                     </div>
                 </article>
 
                 <article class="menu-card" data-cat="classic">
                     <div class="menu-media">
-                         
                         <img src="pepperoni-pizza.jpg" alt="Pepperoni pizza" loading="lazy">
                     </div>
                     <div class="menu-body">
                         <h3>Pepperoni Classic</h3>
                         <p>Mozzarella and crisp-edge pepperoni on tomato sauce.</p>
                         <div class="menu-foot">
-                            <span class="menu-price">20gh</span>
-                            <a href="#" class="menu-btn">Add to cart</a>
+                            <span class="menu-price">GH₵20</span>
+                            <input class="pizza-choice" type="checkbox" id="choose-pepperoni">
+                            <label class="pizza-choice-button" for="choose-pepperoni">
+                                <span class="choose-label">Add to cart</span>
+                                <span class="chosen-label">Added ✓</span>
+                            </label>
                         </div>
                     </div>
                 </article>
@@ -79,23 +102,30 @@
                         <h3>Four Cheese</h3>
                         <p>Mozzarella, cheddar, parmesan, and gorgonzola.</p>
                         <div class="menu-foot">
-                            <span class="menu-price">20gh</span>
-                            <a href="#" class="menu-btn">Add to cart</a>
+                            <span class="menu-price">GH₵20</span>
+                            <input class="pizza-choice" type="checkbox" id="choose-four-cheese">
+                            <label class="pizza-choice-button" for="choose-four-cheese">
+                                <span class="choose-label">Add to cart</span>
+                                <span class="chosen-label">Added ✓</span>
+                            </label>
                         </div>
                     </div>
                 </article>
 
-                <article class="menu-card" data-cat="gourmet">
+                <article class="menu-card" data-cat="gourmet" id="gourmet">
                     <div class="menu-media">
-                        
                         <img src="mushroom-pizza.jpg" alt="Truffle mushroom pizza" loading="lazy">
                     </div>
                     <div class="menu-body">
                         <h3>Truffle Mushroom</h3>
                         <p>Wild mushrooms, truffle cream, thyme, and parmesan.</p>
                         <div class="menu-foot">
-                            <span class="menu-price">20gh</span>
-                            <a href="#" class="menu-btn">Add to cart</a>
+                            <span class="menu-price">GH₵20</span>
+                            <input class="pizza-choice" type="checkbox" id="choose-mushroom">
+                            <label class="pizza-choice-button" for="choose-mushroom">
+                                <span class="choose-label">Add to cart</span>
+                                <span class="chosen-label">Added ✓</span>
+                            </label>
                         </div>
                     </div>
                 </article>
@@ -108,37 +138,48 @@
                         <h3>Prosciutto Arugula</h3>
                         <p>Prosciutto, fresh arugula, shaved parmesan, balsamic glaze.</p>
                         <div class="menu-foot">
-                            <span class="menu-price">20gh</span>
-                            <a href="#" class="menu-btn">Add to cart</a>
+                            <span class="menu-price">GH₵20</span>
+                            <input class="pizza-choice" type="checkbox" id="choose-prosciutto">
+                            <label class="pizza-choice-button" for="choose-prosciutto">
+                                <span class="choose-label">Add to cart</span>
+                                <span class="chosen-label">Added ✓</span>
+                            </label>
                         </div>
                     </div>
                 </article>
 
-                <article class="menu-card" data-cat="gourmet">
+                <article class="menu-card" data-cat="gourmet" id="hot-honey">
                     <div class="menu-media">
-                         
-                        <img src="hot honey.jpg" alt="Hot honey salami pizza" loading="lazy">
+                        <img src="hot%20honey.jpg" alt="Hot honey salami pizza" loading="lazy">
                     </div>
                     <div class="menu-body">
                         <h3>Hot Honey Salami</h3>
                         <p>Spicy salami, chili flakes, mozzarella, and a honey drizzle.</p>
                         <div class="menu-foot">
-                            <span class="menu-price">20gh</span>
-                            <a href="#" class="menu-btn">Add to cart</a>
+                            <span class="menu-price">GH₵20</span>
+                            <input class="pizza-choice" type="checkbox" id="choose-hot-honey">
+                            <label class="pizza-choice-button" for="choose-hot-honey">
+                                <span class="choose-label">Add to cart</span>
+                                <span class="chosen-label">Added ✓</span>
+                            </label>
                         </div>
                     </div>
                 </article>
 
-                <article class="menu-card" data-cat="deep">
+                <article class="menu-card" data-cat="deep" id="deep-dish">
                     <div class="menu-media">
-                        <img src="chicago pizza.jpg" alt="Chicago deep dish pizza" loading="lazy">
+                        <img src="chicago%20pizza.jpg" alt="Chicago deep dish pizza" loading="lazy">
                     </div>
                     <div class="menu-body">
                         <h3>Chicago Deep Dish</h3>
                         <p>Buttery crust, layered cheese, sausage, and chunky tomato.</p>
                         <div class="menu-foot">
-                            <span class="menu-price">20gh</span>
-                            <a href="#" class="menu-btn">Add to cart</a>
+                            <span class="menu-price">GH₵20</span>
+                            <input class="pizza-choice" type="checkbox" id="choose-chicago">
+                            <label class="pizza-choice-button" for="choose-chicago">
+                                <span class="choose-label">Add to cart</span>
+                                <span class="chosen-label">Added ✓</span>
+                            </label>
                         </div>
                     </div>
                 </article>
@@ -151,23 +192,30 @@
                         <h3>Detroit Pan</h3>
                         <p>Caramelized cheese edges, pepperoni, and sauce on top.</p>
                         <div class="menu-foot">
-                            <span class="menu-price">20gh</span>
-                            <a href="#" class="menu-btn">Add to cart</a>
+                            <span class="menu-price">GH₵20</span>
+                            <input class="pizza-choice" type="checkbox" id="choose-detroit">
+                            <label class="pizza-choice-button" for="choose-detroit">
+                                <span class="choose-label">Add to cart</span>
+                                <span class="chosen-label">Added ✓</span>
+                            </label>
                         </div>
                     </div>
                 </article>
 
-                <article class="menu-card" data-cat="meat">
+                <article class="menu-card" data-cat="meat" id="meat-lovers">
                     <div class="menu-media">
-                         
                         <img src="meatlover.jpg" alt="Meat lovers pizza" loading="lazy">
                     </div>
                     <div class="menu-body">
                         <h3>Meat Lovers</h3>
                         <p>Pepperoni, sausage, bacon, ham, and ground beef.</p>
                         <div class="menu-foot">
-                            <span class="menu-price">20gh</span>
-                            <a href="#" class="menu-btn">Add to cart</a>
+                            <span class="menu-price">GH₵20</span>
+                            <input class="pizza-choice" type="checkbox" id="choose-meat-lovers">
+                            <label class="pizza-choice-button" for="choose-meat-lovers">
+                                <span class="choose-label">Add to cart</span>
+                                <span class="chosen-label">Added ✓</span>
+                            </label>
                         </div>
                     </div>
                 </article>
@@ -180,13 +228,17 @@
                         <h3>BBQ Chicken Smash</h3>
                         <p>Grilled chicken, bacon, red onion, BBQ sauce, mozzarella.</p>
                         <div class="menu-foot">
-                            <span class="menu-price">20gh</span>
-                            <a href="#" class="menu-btn">Add to cart</a>
+                            <span class="menu-price">GH₵20</span>
+                            <input class="pizza-choice" type="checkbox" id="choose-bbq-chicken">
+                            <label class="pizza-choice-button" for="choose-bbq-chicken">
+                                <span class="choose-label">Add to cart</span>
+                                <span class="chosen-label">Added ✓</span>
+                            </label>
                         </div>
                     </div>
                 </article>
 
-                <article class="menu-card" data-cat="veggie">
+                <article class="menu-card" data-cat="veggie" id="veggie">
                     <div class="menu-media">
                         <img src="viggies.jpg" alt="Garden veggie pizza" loading="lazy">
                     </div>
@@ -194,28 +246,57 @@
                         <h3>Garden Veggie</h3>
                         <p>Peppers, mushrooms, olives, onion, and tomato.</p>
                         <div class="menu-foot">
-                            <span class="menu-price">20gh</span>
-                            <a href="#" class="menu-btn">Add to cart</a>
+                            <span class="menu-price">GH₵20</span>
+                            <input class="pizza-choice" type="checkbox" id="choose-garden-veggie">
+                            <label class="pizza-choice-button" for="choose-garden-veggie">
+                                <span class="choose-label">Add to cart</span>
+                                <span class="chosen-label">Added ✓</span>
+                            </label>
                         </div>
                     </div>
                 </article>
 
                 <article class="menu-card" data-cat="veggie">
                     <div class="menu-media">
-                        <span class="menu-tag"></span>
+                        <span class="menu-tag">Vegan</span>
                         <img src="vegan.jpg" alt="Vegan pesto pizza" loading="lazy">
                     </div>
                     <div class="menu-body">
                         <h3>Vegan Pesto</h3>
                         <p>Basil pesto, plant-based cheese, zucchini, cherry tomato.</p>
                         <div class="menu-foot">
-                            <span class="menu-price">20gh</span>
-                            <a href="#" class="menu-btn">Add to cart</a>
+                            <span class="menu-price">GH₵20</span>
+                            <input class="pizza-choice" type="checkbox" id="choose-vegan-pesto">
+                            <label class="pizza-choice-button" for="choose-vegan-pesto">
+                                <span class="choose-label">Add to cart</span>
+                                <span class="chosen-label">Added ✓</span>
+                            </label>
                         </div>
                     </div>
                 </article>
+
             </section>
         </div>
     </main>
+
+    <footer class="footer">
+        <div class="footer-grid">
+            <div>
+                <h4>PizzaSlice</h4>
+                <p>Fresh pizza, honest prices, delivered hot.</p>
+            </div>
+            <div>
+                <h4>Explore</h4>
+                <a href="menu.html">Menu</a>
+                <a href="deals.html">Deals</a>
+                <a href="trackorders.html">Track Orders</a>
+            </div>
+            <div>
+                <h4>Hours</h4>
+                <p>Open daily, lunch to late night.</p>
+            </div>
+        </div>
+        <p class="footer-bottom">&copy; 2026 PizzaSlice. All rights reserved.</p>
+    </footer>
 </body>
 </html>
