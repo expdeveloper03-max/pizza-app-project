@@ -934,6 +934,12 @@ a.category-card {
     background: var(--brand-soft);
 }
 
+.feature-icon svg {
+    width: 30px;
+    height: 30px;
+    color: var(--brand-dark);
+}
+
 @media (max-width: 768px) {
     .navbar {
         padding: 12px 20px;
