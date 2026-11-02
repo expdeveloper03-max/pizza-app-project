@@ -129,6 +129,7 @@
 .deal-item:hover {
     transform: translateY(-4px);
     box-shadow: var(--shadow);
+    background: var(--surface-hover);
 }
 
 .deal-item img {
