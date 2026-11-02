@@ -198,6 +198,10 @@
 
 .menu-card:hover .menu-media img {
     transform: scale(1.05);
+    }
+
+.menu-card:hover{
+    background: #f5e6d6;
 }
 
 .menu-card[data-cat="classic"] .menu-media::before,
