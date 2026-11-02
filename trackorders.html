@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Track your Pizza Haven order from the kitchen to your door.">
+    <title>Pizza Haven - Track Orders</title>
+    <link rel="stylesheet" href="pizza.css">
+    <link rel="stylesheet" href="trackorders.css">
+</head>
+<body>
+    <a class="skip-link" href="#main">Skip to main content</a>
+
+    <header class="navbar">
+        <a href="pizzaproject.html" class="logo">Pizza<span>Slice</span></a>
+        <nav class="nav-links" aria-label="Main navigation">
+            <a href="pizzaproject.html">Home</a>
+            <a href="menu.html">Menu</a>
+            <a href="deals.html">Deals</a>
+            <a href="trackorders.html" class="active" aria-current="page">Track Orders</a>
+        </nav>
+    </header>
+
+    <main id="main">
+        <section class="track-hero">
+            <h1>Track Your Order</h1>
+            <p class="subtitle">Enter your order number and phone number to see where your pizza is.</p>
+        </section>
+
+        <div class="track-layout container">
+
+            <!-- Lookup form -->
+            <section class="track-form-card" aria-labelledby="lookup-title">
+                <h2 id="lookup-title">Find your order</h2>
+
+                <form action="trackorders.html" method="get">
+                    <div class="form-group">
+                        <label for="order-id">Order number</label>
+                        <input type="text" id="order-id" name="order" placeholder="e.g. PH-1042" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">Phone number</label>
+                        <input type="tel" id="phone" name="phone" placeholder="e.g. 024 000 0000" required>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary track-submit">Track order</button>
+                </form>
+
+                <p class="form-note">Your order number is on the confirmation you received when you ordered.</p>
+            </section>
+
+            <!-- Example result -->
+            <section class="track-result" aria-labelledby="result-title">
+                <div class="result-head">
+                    <div>
+                        <span class="example-tag">Example</span>
+                        <h2 id="result-title">Order PH-1042</h2>
+                    </div>
+                    <div class="eta">
+                        <span class="eta-label">Estimated arrival</span>
+                        <span class="eta-time">25 to 35 min</span>
+                    </div>
+                </div>
+
+                <ol class="timeline">
+                    <li class="done">
+                        <span class="dot" aria-hidden="true"></span>
+                        <div>
+                            <h3>Order received</h3>
+                            <p>We have your order and payment details.</p>
+                        </div>
+                    </li>
+                    <li class="done">
+                        <span class="dot" aria-hidden="true"></span>
+                        <div>
+                            <h3>Preparing</h3>
+                            <p>The dough is stretched and the toppings are going on.</p>
+                        </div>
+                    </li>
+                    <li class="current" aria-current="step">
+                        <span class="dot" aria-hidden="true"></span>
+                        <div>
+                            <h3>In the oven</h3>
+                            <p>Your pizza is baking.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="dot" aria-hidden="true"></span>
+                        <div>
+                            <h3>Out for delivery</h3>
+                            <p>A rider is on the way to you.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="dot" aria-hidden="true"></span>
+                        <div>
+                            <h3>Delivered</h3>
+                            <p>Enjoy your meal.</p>
+                        </div>
+                    </li>
+                </ol>
+
+                <div class="order-summary">
+                    <h3>Order summary</h3>
+                    <ul>
+                        <li><span>1 x Meat Lovers</span><span>GH₵20</span></li>
+                        <li><span>1 x Four Cheese</span><span>GH₵20</span></li>
+                        <li class="total"><span>Total</span><span>GH₵40</span></li>
+                    </ul>
+                </div>
+            </section>
+        </div>
+
+        <!-- FAQ -->
+        <section class="container faq" aria-labelledby="faq-title">
+            <h2 id="faq-title" class="faq-title">Common questions</h2>
+
+            <details>
+                <summary>I can't find my order number</summary>
+                <p>It is on the confirmation message from when you placed the order. If you have lost it, contact the restaurant and give the phone number you used.</p>
+            </details>
+
+            <details>
+                <summary>How long does delivery take?</summary>
+                <p>Most orders arrive within 25 to 45 minutes, depending on how busy we are and how far you are from the kitchen.</p>
+            </details>
+
+            <details>
+                <summary>Can I change or cancel my order?</summary>
+                <p>You can change or cancel while the status is still "Order received" or "Preparing". After the pizza is in the oven, it can no longer be changed.</p>
+            </details>
+
+            <details>
+                <summary>My order is late. What should I do?</summary>
+                <p>Check the status above first. If it has been more than 15 minutes past the estimate, contact the restaurant and we will sort it out.</p>
+            </details>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-grid">
+            <div>
+                <h4>PizzaSlice</h4>
+                <p>Fresh pizza, honest prices, delivered hot.</p>
+            </div>
+            <div>
+                <h4>Explore</h4>
+                <a href="menu.html">Menu</a>
+                <a href="deals.html">Deals</a>
+                <a href="trackorders.html">Track Orders</a>
+            </div>
+            <div>
+                <h4>Hours</h4>
+                <p>Open daily, lunch to late night.</p>
+            </div>
+        </div>
+        <p class="footer-bottom">&copy; 2026 PizzaSlice. All rights reserved.</p>
+    </footer>
+</body>
+</html>
