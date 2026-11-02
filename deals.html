@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Current Pizza Haven deals: family feasts, two-for-one classics, veggie Tuesdays and a discount on your first order.">
+    <title>Pizza Haven - Deals</title>
+    <link rel="stylesheet" href="pizza.css">
+    <link rel="stylesheet" href="deals.css">
+</head>
+<body>
+    <a class="skip-link" href="#main">Skip to main content</a>
+
+    <header class="navbar">
+        <a href="pizzaproject.html" class="logo">Pizza<span>Slice</span></a>
+        <nav class="nav-links" aria-label="Main navigation">
+            <a href="pizzaproject.html">Home</a>
+            <a href="menu.html">Menu</a>
+            <a href="deals.html" class="active" aria-current="page">Deals</a>
+            <a href="trackorders.html">Track Orders</a>
+        </nav>
+    </header>
+
+    <main id="main">
+        <section class="deals-hero">
+            <h1>Hot Deals</h1>
+            <p class="subtitle">Great pizza, friendlier prices. Pick a deal and add it to your order.</p>
+        </section>
+
+        <div class="container">
+
+            <!-- Featured deal -->
+            <section class="deal-feature" aria-labelledby="feature-title">
+                <img src="meatlover.jpg" alt="Meat lovers pizza" class="deal-feature-img">
+                <div class="deal-feature-body">
+                    <span class="deal-label">Best value</span>
+                    <h2 id="feature-title">Family Feast</h2>
+                    <p>Meat Lovers, Four Cheese and Margherita together. Enough for the whole table.</p>
+                    <p class="deal-prices">
+                        <span class="price-new">GH₵50</span>
+                        <s class="price-old">GH₵60</s>
+                        <span class="deal-save">Save GH₵10</span>
+                    </p>
+                    <a href="menu.html" class="btn btn-primary">Order this deal</a>
+                </div>
+            </section>
+
+            <!-- More deals -->
+            <section aria-labelledby="more-deals">
+                <h2 id="more-deals" class="deals-heading">More ways to save</h2>
+
+                <div class="deal-grid">
+                    <article class="deal-item">
+                        <img src="pepperoni-pizza.jpg" alt="Pepperoni pizza" loading="lazy">
+                        <div class="deal-item-body">
+                            <span class="deal-chip">Every day</span>
+                            <h3>Two Classics</h3>
+                            <p>Any two Classic and Traditional pizzas for one lower price.</p>
+                            <p class="deal-prices">
+                                <span class="price-new">GH₵35</span>
+                                <s class="price-old">GH₵40</s>
+                            </p>
+                            <a href="menu.html#classic" class="btn btn-outline">View classics</a>
+                        </div>
+                    </article>
+
+                    <article class="deal-item">
+                        <img src="viggies.jpg" alt="Garden veggie pizza" loading="lazy">
+                        <div class="deal-item-body">
+                            <span class="deal-chip">Tuesdays</span>
+                            <h3>Veggie Tuesday</h3>
+                            <p>Our Garden Veggie pizza at a special price every Tuesday.</p>
+                            <p class="deal-prices">
+                                <span class="price-new">GH₵15</span>
+                                <s class="price-old">GH₵20</s>
+                            </p>
+                            <a href="menu.html#veggie" class="btn btn-outline">View veggie</a>
+                        </div>
+                    </article>
+
+                    <article class="deal-item">
+                        <img src="four-cheese.jpg" alt="Four cheese pizza" loading="lazy">
+                        <div class="deal-item-body">
+                            <span class="deal-chip">Weekends</span>
+                            <h3>Cheese Weekend</h3>
+                            <p>Mozzarella, cheddar, parmesan and gorgonzola, a little cheaper on Saturday and Sunday.</p>
+                            <p class="deal-prices">
+                                <span class="price-new">GH₵18</span>
+                                <s class="price-old">GH₵20</s>
+                            </p>
+                            <a href="menu.html#classic" class="btn btn-outline">View pizza</a>
+                        </div>
+                    </article>
+
+                    <article class="deal-item">
+                        <img src="Pizza-Margheritta.webp" alt="Margherita pizza" loading="lazy">
+                        <div class="deal-item-body">
+                            <span class="deal-chip">Students</span>
+                            <h3>Student Special</h3>
+                            <p>Show a valid student ID when you order and get 10% off any pizza.</p>
+                            <p class="deal-prices">
+                                <span class="price-new">10% off</span>
+                            </p>
+                            <a href="menu.html" class="btn btn-outline">Browse menu</a>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+            <!-- Promo code -->
+            <section class="promo" aria-labelledby="promo-title">
+                <div>
+                    <h2 id="promo-title">First time ordering?</h2>
+                    <p>Use this code at checkout for 10% off your first order.</p>
+                </div>
+                <div class="promo-code" aria-label="Promo code WELCOME10">WELCOME10</div>
+            </section>
+
+            <!-- How to claim -->
+            <section aria-labelledby="claim-title">
+                <h2 id="claim-title" class="deals-heading">How to claim a deal</h2>
+
+                <ol class="steps">
+                    <li>
+                        <span class="step-num" aria-hidden="true">1</span>
+                        <h3>Pick your pizza</h3>
+                        <p>Choose a deal here or browse the full menu.</p>
+                    </li>
+                    <li>
+                        <span class="step-num" aria-hidden="true">2</span>
+                        <h3>Add it to your order</h3>
+                        <p>Tell us the deal name or enter the promo code.</p>
+                    </li>
+                    <li>
+                        <span class="step-num" aria-hidden="true">3</span>
+                        <h3>Track it</h3>
+                        <p>Follow your order on the Track Orders page until it arrives.</p>
+                    </li>
+                </ol>
+            </section>
+
+            <p class="deal-terms">
+                Deals cannot be combined unless stated. Prices are in Ghana cedis and may change without notice.
+            </p>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-grid">
+            <div>
+                <h4>PizzaSlice</h4>
+                <p>Fresh pizza, honest prices, delivered hot.</p>
+            </div>
+            <div>
+                <h4>Explore</h4>
+                <a href="menu.html">Menu</a>
+                <a href="deals.html">Deals</a>
+                <a href="trackorders.html">Track Orders</a>
+            </div>
+            <div>
+                <h4>Hours</h4>
+                <p>Open daily, lunch to late night.</p>
+            </div>
+        </div>
+        <p class="footer-bottom">&copy; 2026 PizzaSlice. All rights reserved.</p>
+    </footer>
+</body>
+</html>
