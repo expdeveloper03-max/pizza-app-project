@@ -1,0 +1,325 @@
+.details-layout[hidden],
+.pizza-not-found[hidden] {
+    display: none;
+}
+
+.pizza-details {
+    min-height: 65vh;
+    padding-top: 28px;
+    padding-bottom: 64px;
+}
+
+.back-to-menu {
+    display: inline-block;
+    margin-bottom: 22px;
+    color: var(--brand-dark);
+    font-size: 14px;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.back-to-menu:hover {
+    color: var(--tomato);
+}
+
+.details-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(340px, 0.9fr);
+    align-items: start;
+    gap: clamp(28px, 5vw, 64px);
+}
+
+.details-image-wrap {
+    position: sticky;
+    top: 110px;
+    overflow: hidden;
+    border-radius: var(--radius);
+    background: var(--brand-soft);
+    box-shadow: var(--shadow);
+}
+
+.details-image-wrap img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+}
+
+.details-category {
+    position: absolute;
+    top: 18px;
+    left: 18px;
+    padding: 6px 13px;
+    border-radius: var(--radius-pill);
+    background: rgba(255, 248, 240, 0.95);
+    color: var(--brand-dark);
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.details-panel {
+    padding: 4px 0;
+}
+
+.details-eyebrow {
+    margin-bottom: 8px;
+    color: var(--brand-dark);
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 1.7px;
+}
+
+.details-panel h1,
+.pizza-not-found h1 {
+    margin-bottom: 10px;
+    color: var(--ink);
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: clamp(32px, 4vw, 46px);
+    line-height: 1.1;
+}
+
+.details-description {
+    margin-bottom: 14px;
+    color: var(--muted);
+}
+
+.ingredients {
+    margin-bottom: 24px;
+    color: var(--text);
+    font-size: 14px;
+}
+
+.ingredients strong {
+    color: var(--ink);
+}
+
+.option-group {
+    min-width: 0;
+    margin: 0 0 22px;
+    padding: 0;
+    border: 0;
+}
+
+.option-group legend,
+.select-group > span {
+    margin-bottom: 10px;
+    color: var(--ink);
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.size-options {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 9px;
+}
+
+.size-options label,
+.check-options label {
+    position: relative;
+    cursor: pointer;
+}
+
+.size-options input {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    opacity: 0;
+}
+
+.size-options label > span {
+    display: flex;
+    min-height: 58px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    background: var(--surface);
+    color: var(--ink);
+    font-size: 15px;
+    font-weight: 700;
+    transition: border-color var(--ease), background-color var(--ease), color var(--ease);
+}
+
+.size-options small {
+    color: var(--muted);
+    font-size: 11px;
+    font-weight: 600;
+}
+
+.size-options input:checked + span {
+    border-color: var(--brand-dark);
+    background: var(--brand-soft);
+    color: var(--brand-dark);
+}
+
+.size-options input:focus-visible + span {
+    outline: 3px solid var(--tomato);
+    outline-offset: 2px;
+}
+
+.option-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+    margin-bottom: 22px;
+}
+
+.select-group {
+    display: flex;
+    min-width: 0;
+    flex-direction: column;
+}
+
+.select-group > span {
+    margin-bottom: 7px;
+}
+
+.select-group select {
+    width: 100%;
+    min-height: 44px;
+    padding: 8px 10px;
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    background: var(--surface);
+    color: var(--text);
+    font: inherit;
+    font-size: 13px;
+}
+
+.select-group select:focus-visible,
+.check-options input:focus-visible + span {
+    outline: 3px solid var(--tomato);
+    outline-offset: 2px;
+}
+
+.legend-note {
+    margin-left: 5px;
+    color: var(--muted);
+    font-size: 12px;
+    font-weight: 400;
+}
+
+.check-options {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 8px;
+}
+
+.check-options label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--text);
+    font-size: 13px;
+}
+
+.check-options input {
+    width: 16px;
+    height: 16px;
+    accent-color: var(--brand-dark);
+}
+
+.removable-group {
+    padding-top: 18px;
+    border-top: 1px solid var(--border);
+}
+
+.order-submit {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    padding-top: 18px;
+    border-top: 1px solid var(--border);
+}
+
+.order-submit p {
+    color: var(--muted);
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.order-submit strong {
+    display: block;
+    color: var(--brand-dark);
+    font-size: 24px;
+}
+
+.add-pizza-button {
+    display: inline-flex;
+    min-height: 46px;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 20px;
+    border: 0;
+    border-radius: var(--radius-pill);
+    background: var(--brand-dark);
+    color: #fff;
+    font: inherit;
+    font-size: 14px;
+    font-weight: 700;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color var(--ease);
+}
+
+.add-pizza-button:hover {
+    background: var(--tomato);
+}
+
+.order-message {
+    min-height: 24px;
+    margin-top: 10px;
+    color: #405d3b;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.order-message.order-error {
+    color: var(--tomato-dark);
+}
+
+.pizza-not-found {
+    max-width: 580px;
+    margin: 50px auto 80px;
+    text-align: center;
+}
+
+.pizza-not-found p {
+    margin-bottom: 22px;
+    color: var(--muted);
+}
+
+@media (max-width: 760px) {
+    .details-layout {
+        grid-template-columns: 1fr;
+        gap: 26px;
+    }
+
+    .details-image-wrap {
+        position: relative;
+        top: auto;
+    }
+
+    .details-image-wrap img {
+        max-height: 480px;
+        aspect-ratio: 1.25 / 1;
+    }
+}
+
+@media (max-width: 440px) {
+    .pizza-details {
+        padding-top: 20px;
+    }
+
+    .option-row {
+        grid-template-columns: 1fr;
+    }
+
+    .order-submit {
+        align-items: flex-end;
+    }
+}

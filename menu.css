@@ -166,6 +166,7 @@
 }
 
 .menu-card {
+    position: relative;
     display: flex;
     flex-direction: column;
     background: var(--surface);
@@ -175,6 +176,18 @@
     box-shadow: 0 6px 20px rgba(80, 42, 27, 0.055);
     scroll-margin-top: 90px; /* keeps the card clear of the sticky navbar when jumped to */
     transition: transform var(--ease), box-shadow var(--ease);
+}
+
+.menu-card-link {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+}
+
+.menu-card-link:focus-visible {
+    outline: 3px solid var(--tomato);
+    outline-offset: -5px;
+    border-radius: 12px;
 }
 
 .menu-card:hover {
@@ -281,36 +294,9 @@
     color: var(--muted);
 }
 
-.menu-size-picker {
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
-    margin-bottom: 14px;
-}
-
-.menu-size-picker label {
-    color: var(--muted);
-    font-size: 12px;
-    font-weight: 600;
-}
-
-.pizza-size {
-    width: 100%;
-    padding: 8px 10px;
-    border: 1px solid var(--border);
-    border-radius: var(--radius-sm);
-    background: var(--surface);
-    color: var(--ink);
-    font: inherit;
-    font-size: 14px;
-}
-
-.pizza-size:focus-visible {
-    outline: 3px solid var(--tomato);
-    outline-offset: 2px;
-}
-
 .menu-foot {
+    position: relative;
+    z-index: 2;
     display: flex;
     justify-content: space-between;
     align-items: center;

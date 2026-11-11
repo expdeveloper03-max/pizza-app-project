@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Customize your PizzaSlice pizza with your favorite size, dough, crust, and toppings.">
+    <title>Customize Your Pizza — PizzaSlice</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap">
+    <link rel="stylesheet" href="pizza.css">
+    <link rel="stylesheet" href="pizza-details.css">
+    <script src="js/pizza-details.js" defer></script>
+</head>
+<body>
+    <a class="skip-link" href="#main">Skip to main content</a>
+
+    <header class="navbar">
+        <a href="index.html" class="logo">Pizza<span>Slice</span></a>
+        <input class="nav-checkbox" type="checkbox" id="nav-toggle" aria-label="Toggle navigation">
+        <label class="nav-toggle" for="nav-toggle" aria-hidden="true">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+        <nav class="nav-links" aria-label="Main navigation">
+            <a href="index.html">Home</a>
+            <a href="menu.html" class="active" aria-current="page">Menu</a>
+            <a href="deals.html">Deals</a>
+            <a href="trackorders.html">Track Orders</a>
+        </nav>
+    </header>
+
+    <main id="main" class="pizza-details container">
+        <a class="back-to-menu" href="menu.html">← Back to the menu</a>
+        <div class="details-layout" id="pizza-details-content" hidden>
+            <div class="details-image-wrap">
+                <img id="pizza-image" src="" alt="">
+                <span class="details-category" id="pizza-category"></span>
+            </div>
+            <section class="details-panel" aria-labelledby="pizza-name">
+                <p class="details-eyebrow">MADE FRESH, JUST FOR YOU</p>
+                <h1 id="pizza-name"></h1>
+                <p class="details-description" id="pizza-description"></p>
+                <p class="ingredients"><strong>On this pizza:</strong> <span id="pizza-ingredients"></span></p>
+
+                <form id="pizza-order-form">
+                    <fieldset class="option-group">
+                        <legend>Choose your size</legend>
+                        <div class="size-options">
+                            <label><input type="radio" name="size" value="XS" checked><span>XS<small>GH₵20</small></span></label>
+                            <label><input type="radio" name="size" value="M"><span>M<small>GH₵30</small></span></label>
+                            <label><input type="radio" name="size" value="L"><span>L<small>GH₵40</small></span></label>
+                            <label><input type="radio" name="size" value="XL"><span>XL<small>GH₵50</small></span></label>
+                        </div>
+                    </fieldset>
+
+                    <div class="option-row">
+                        <label class="select-group" for="dough-choice">
+                            <span>Dough</span>
+                            <select id="dough-choice" name="dough">
+                                <option>Classic</option>
+                                <option>Thin and crispy</option>
+                                <option>Whole wheat</option>
+                            </select>
+                        </label>
+                        <label class="select-group" for="crust-choice">
+                            <span>Crust</span>
+                            <select id="crust-choice" name="crust">
+                                <option>Original</option>
+                                <option>Stuffed crust (+GH₵5)</option>
+                                <option>Gluten-free (+GH₵5)</option>
+                            </select>
+                        </label>
+                    </div>
+
+                    <fieldset class="option-group">
+                        <legend>Extra toppings <span class="legend-note">+GH₵3 each</span></legend>
+                        <div class="check-options">
+                            <label><input type="checkbox" name="extra" value="Extra mozzarella"><span>Extra mozzarella</span></label>
+                            <label><input type="checkbox" name="extra" value="Mushrooms"><span>Mushrooms</span></label>
+                            <label><input type="checkbox" name="extra" value="Olives"><span>Olives</span></label>
+                            <label><input type="checkbox" name="extra" value="Jalapeños"><span>Jalapeños</span></label>
+                            <label><input type="checkbox" name="extra" value="Bacon"><span>Bacon</span></label>
+                            <label><input type="checkbox" name="extra" value="Pineapple"><span>Pineapple</span></label>
+                        </div>
+                    </fieldset>
+
+                    <fieldset class="option-group removable-group">
+                        <legend>Remove ingredients</legend>
+                        <div class="check-options" id="removable-options"></div>
+                    </fieldset>
+
+                    <div class="order-submit">
+                        <p>Total <strong id="pizza-price" aria-live="polite">GH₵20</strong></p>
+                        <button class="add-pizza-button" type="submit">Add to order</button>
+                    </div>
+                    <p class="order-message" id="order-message" role="status" aria-live="polite"></p>
+                </form>
+            </section>
+        </div>
+        <section class="pizza-not-found" id="pizza-not-found" hidden>
+            <h1>That pizza isn’t on our menu.</h1>
+            <p>Choose a pizza from the menu to see its details and customize your order.</p>
+            <a class="add-pizza-button" href="menu.html">Browse the menu</a>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-grid">
+            <div>
+                <h4>PizzaSlice</h4>
+                <p>Fresh pizza, honest prices, delivered hot.</p>
+            </div>
+            <div>
+                <h4>Explore</h4>
+                <a href="menu.html">Menu</a>
+                <a href="deals.html">Deals</a>
+                <a href="trackorders.html">Track Orders</a>
+            </div>
+            <div>
+                <h4>Hours</h4>
+                <p>Open daily, lunch to late night.</p>
+            </div>
+        </div>
+        <p class="footer-bottom">&copy; 2026 PizzaSlice. All rights reserved.</p>
+    </footer>
+</body>
+</html>
