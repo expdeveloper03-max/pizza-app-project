@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap">
     <link rel="stylesheet" href="pizza.css">
     <link rel="stylesheet" href="menu.css">
+    <script src="js/cart.js" defer></script>
     <script src="js/menu.js" defer></script>
 </head>
 <body>
@@ -27,6 +28,7 @@
             <a href="menu.html" class="active" aria-current="page">Menu</a>
             <a href="deals.html">Deals</a>
             <a href="trackorders.html">Track Orders</a>
+            <a href="cart.html">Cart <span class="cart-count" data-cart-count aria-label="0 items in cart">0</span></a>
         </nav>
     </header>
 
@@ -46,6 +48,7 @@
                     <p class="menu-eyebrow">MADE FRESH, EVERY TIME</p>
                     <h2>Find your next favorite.</h2>
                 </div>
+                <p class="menu-cart-message" id="menu-cart-message" role="status" aria-live="polite"></p>
                 <p>12 pizzas <span aria-hidden="true">·</span> zero wrong choices</p>
             </div>
 

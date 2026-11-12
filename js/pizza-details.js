@@ -118,17 +118,20 @@ if (pizza) {
     const priceOutput = document.getElementById("pizza-price");
     const orderMessage = document.getElementById("order-message");
     const quantityInput = document.getElementById("pizza-quantity");
-    const sizePrices = { XS: 20, M: 30, L: 40, XL: 50 };
+    const sizePrices = { S: 20, M: 30, L: 40, XL: 50 };
     const extraPrice = 3;
     const premiumCrustPrice = 5;
 
-    const getTotal = () => {
+    const getUnitPrice = () => {
         const size = form.elements.namedItem("size").value;
         const extras = form.querySelectorAll('input[name="extra"]:checked').length;
         const premiumCrust = form.elements.namedItem("crust").value !== "Original";
 
-        const unitPrice = sizePrices[size] + extras * extraPrice + (premiumCrust ? premiumCrustPrice : 0);
-        return unitPrice * Number(quantityInput.value);
+        return sizePrices[size] + extras * extraPrice + (premiumCrust ? premiumCrustPrice : 0);
+    };
+
+    const getTotal = () => {
+        return getUnitPrice() * Number(quantityInput.value);
     };
 
     const updatePrice = () => {
@@ -147,25 +150,21 @@ if (pizza) {
 
         const order = {
             pizza: pizza.name,
+            image: pizza.image,
             quantity: Number(quantityInput.value),
             size: form.elements.namedItem("size").value,
             dough: form.elements.namedItem("dough").value,
             crust: form.elements.namedItem("crust").value,
             extraToppings: Array.from(form.querySelectorAll('input[name="extra"]:checked'), (input) => input.value),
             removedIngredients: Array.from(form.querySelectorAll('input[name="remove"]:checked'), (input) => input.value),
+            unitPrice: getUnitPrice(),
             price: getTotal()
         };
 
         try {
-            const cart = JSON.parse(localStorage.getItem("pizzasliceCart") || "[]");
-            if (!Array.isArray(cart)) {
-                throw new Error("Saved order data is invalid.");
-            }
-
-            cart.push(order);
-            localStorage.setItem("pizzasliceCart", JSON.stringify(cart));
+            window.PizzaCart.add(order);
             orderMessage.classList.remove("order-error");
-            orderMessage.textContent = `${order.pizza} (${order.size}) added to your order for GH₵${order.price}.`;
+            orderMessage.textContent = `${order.quantity} × ${order.pizza} (${order.size}) added to your cart for GH₵${order.price}.`;
         } catch {
             orderMessage.classList.add("order-error");
             orderMessage.textContent = "We couldn’t save your order. Please check your browser storage and try again.";

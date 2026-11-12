@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Review and update your PizzaSlice cart before checkout.">
+    <title>Your Cart — PizzaSlice</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap">
+    <link rel="stylesheet" href="pizza.css">
+    <link rel="stylesheet" href="cart.css">
+    <script src="js/cart.js" defer></script>
+    <script src="js/cart-page.js" defer></script>
+</head>
+<body>
+    <a class="skip-link" href="#main">Skip to main content</a>
+    <header class="navbar">
+        <a href="index.html" class="logo">Pizza<span>Slice</span></a>
+        <nav class="nav-links" aria-label="Main navigation">
+            <a href="menu.html">Menu</a>
+            <a href="deals.html">Deals</a>
+            <a href="cart.html" class="active" aria-current="page">Cart <span class="cart-count" data-cart-count aria-label="0 items in cart">0</span></a>
+        </nav>
+    </header>
+    <main id="main" class="container cart-page">
+        <p class="cart-eyebrow">YOUR ORDER</p>
+        <h1>Your cart</h1>
+        <p class="cart-message" id="cart-message" data-cart-error role="status" aria-live="polite"></p>
+        <section class="cart-empty" id="cart-empty" hidden>
+            <h2>Your cart is waiting for something good.</h2>
+            <p>Choose a pizza from the menu and it’ll show up here.</p>
+            <a class="cart-primary" href="menu.html">Browse the menu</a>
+        </section>
+        <div class="cart-layout" id="cart-content" hidden>
+            <section id="cart-items" class="cart-items" aria-label="Items in your cart"></section>
+            <aside class="cart-summary" aria-labelledby="summary-title">
+                <h2 id="summary-title">Order summary</h2>
+                <p><span id="cart-item-count">0 items</span><strong id="cart-subtotal">GH₵0</strong></p>
+                <p class="cart-note">Delivery and payment details are confirmed at checkout.</p>
+                <a class="cart-primary cart-checkout-link" href="checkout.html">Continue to checkout</a>
+                <a class="cart-secondary" href="menu.html">Add more pizzas</a>
+            </aside>
+        </div>
+    </main>
+    <footer class="footer">
+        <div class="footer-grid">
+            <div><h4>PizzaSlice</h4><p>Fresh pizza, honest prices, delivered hot.</p></div>
+            <div><h4>Explore</h4><a href="menu.html">Menu</a><a href="deals.html">Deals</a><a href="trackorders.html">Track Orders</a></div>
+            <div><h4>Hours</h4><p>Open daily, lunch to late night.</p></div>
+        </div>
+        <p class="footer-bottom">&copy; 2026 PizzaSlice. All rights reserved.</p>
+    </footer>
+</body>
+</html>

@@ -308,6 +308,17 @@
     color: var(--brand-dark);
 }
 
+.menu-cart-message {
+    min-height: 24px;
+    color: #405d3b;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.menu-cart-message.cart-error {
+    color: var(--tomato-dark);
+}
+
 .pizza-choice-button {
     display: inline-flex;
     align-items: center;

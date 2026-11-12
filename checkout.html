@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Enter your delivery details and place your PizzaSlice order.">
+    <title>Checkout — PizzaSlice</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap">
+    <link rel="stylesheet" href="pizza.css">
+    <link rel="stylesheet" href="cart.css">
+    <script src="js/cart.js" defer></script>
+    <script src="js/checkout.js" defer></script>
+</head>
+<body>
+    <a class="skip-link" href="#main">Skip to main content</a>
+    <header class="navbar">
+        <a href="index.html" class="logo">Pizza<span>Slice</span></a>
+        <nav class="nav-links" aria-label="Main navigation">
+            <a href="menu.html">Menu</a>
+            <a href="deals.html">Deals</a>
+            <a href="cart.html">Cart <span class="cart-count" data-cart-count aria-label="0 items in cart">0</span></a>
+        </nav>
+    </header>
+    <main id="main" class="container cart-page">
+        <p class="cart-eyebrow">ALMOST THERE</p>
+        <h1>Checkout</h1>
+        <section class="cart-empty" id="checkout-empty" hidden>
+            <h2>Your cart is empty.</h2>
+            <p>Add a pizza before continuing to checkout.</p>
+            <a class="cart-primary" href="menu.html">Browse the menu</a>
+        </section>
+        <p class="cart-message" id="checkout-message" role="status" aria-live="polite"></p>
+        <section class="order-confirmation" id="checkout-confirmation" aria-labelledby="confirmation-title" hidden>
+            <p class="cart-eyebrow">ORDER RECEIVED</p>
+            <h2 id="confirmation-title">Thanks for your order!</h2>
+            <p>Your order has been saved in this browser. This demo does not process a payment or send your order to a restaurant.</p>
+            <dl>
+                <div><dt>Order reference</dt><dd id="confirmation-order-id"></dd></div>
+                <div><dt>Total due on delivery</dt><dd id="confirmation-total"></dd></div>
+            </dl>
+            <a class="cart-primary" href="menu.html">Back to the menu</a>
+        </section>
+        <div class="checkout-layout" id="checkout-content">
+            <form class="checkout-form" id="checkout-form">
+                <section class="checkout-section" aria-labelledby="delivery-title">
+                    <h2 id="delivery-title">Delivery details</h2>
+                    <label class="checkout-field" for="customer-name">Full name
+                        <input id="customer-name" name="name" autocomplete="name" required>
+                    </label>
+                    <label class="checkout-field" for="customer-phone">Phone number
+                        <input id="customer-phone" name="phone" type="tel" autocomplete="tel" required>
+                    </label>
+                    <label class="checkout-field" for="delivery-address">Street address
+                        <input id="delivery-address" name="address" autocomplete="street-address" required>
+                    </label>
+                    <label class="checkout-field" for="delivery-city">City or area
+                        <input id="delivery-city" name="city" autocomplete="address-level2" required>
+                    </label>
+                    <label class="checkout-field" for="delivery-instructions">Delivery instructions <span>(optional)</span>
+                        <textarea id="delivery-instructions" name="instructions" rows="3"></textarea>
+                    </label>
+                </section>
+                <section class="checkout-section payment-section" aria-labelledby="payment-title">
+                    <h2 id="payment-title">Payment</h2>
+                    <p class="payment-choice">Cash on delivery <span>Pay when your order arrives</span></p>
+                    <p class="checkout-disclaimer">Demo checkout only: no online payment is taken and this order is saved only in this browser.</p>
+                </section>
+                <button class="cart-primary place-order" type="submit">Place order</button>
+            </form>
+            <aside class="cart-summary checkout-summary" aria-labelledby="checkout-summary-title">
+                <h2 id="checkout-summary-title">Your order</h2>
+                <ul id="checkout-summary"></ul>
+                <p class="checkout-total"><span>Total</span><strong id="checkout-subtotal">GH₵0</strong></p>
+                <a class="cart-secondary" href="cart.html">Back to cart</a>
+            </aside>
+        </div>
+    </main>
+    <footer class="footer">
+        <div class="footer-grid">
+            <div><h4>PizzaSlice</h4><p>Fresh pizza, honest prices, delivered hot.</p></div>
+            <div><h4>Explore</h4><a href="menu.html">Menu</a><a href="deals.html">Deals</a><a href="trackorders.html">Track Orders</a></div>
+            <div><h4>Hours</h4><p>Open daily, lunch to late night.</p></div>
+        </div>
+        <p class="footer-bottom">&copy; 2026 PizzaSlice. All rights reserved.</p>
+    </footer>
+</body>
+</html>

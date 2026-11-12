@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap">
     <link rel="stylesheet" href="pizza.css">
     <link rel="stylesheet" href="pizza-details.css">
+    <script src="js/cart.js" defer></script>
     <script src="js/pizza-details.js" defer></script>
 </head>
 <body>
@@ -27,6 +28,7 @@
             <a href="menu.html" class="active" aria-current="page">Menu</a>
             <a href="deals.html">Deals</a>
             <a href="trackorders.html">Track Orders</a>
+            <a href="cart.html">Cart <span class="cart-count" data-cart-count aria-label="0 items in cart">0</span></a>
         </nav>
     </header>
 
@@ -47,7 +49,7 @@
                     <fieldset class="option-group">
                         <legend>Choose your size</legend>
                         <div class="size-options">
-                            <label><input type="radio" name="size" value="XS" checked><span>XS<small>GH₵20</small></span></label>
+                            <label><input type="radio" name="size" value="S" checked><span>S<small>GH₵20</small></span></label>
                             <label><input type="radio" name="size" value="M"><span>M<small>GH₵30</small></span></label>
                             <label><input type="radio" name="size" value="L"><span>L<small>GH₵40</small></span></label>
                             <label><input type="radio" name="size" value="XL"><span>XL<small>GH₵50</small></span></label>
