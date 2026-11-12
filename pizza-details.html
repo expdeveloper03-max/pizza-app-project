@@ -92,7 +92,13 @@
 
                     <div class="order-submit">
                         <p>Total <strong id="pizza-price" aria-live="polite">GH₵20</strong></p>
-                        <button class="add-pizza-button" type="submit">Add to order</button>
+                        <div class="order-actions">
+                            <label class="quantity-control" for="pizza-quantity">
+                                <span>Quantity</span>
+                                <input id="pizza-quantity" name="quantity" type="number" min="1" max="99" step="1" value="1" required>
+                            </label>
+                            <button class="add-pizza-button" type="submit">Add to Cart</button>
+                        </div>
                     </div>
                     <p class="order-message" id="order-message" role="status" aria-live="polite"></p>
                 </form>

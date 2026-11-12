@@ -26,6 +26,10 @@
     --ease: 0.25s ease;
 }
 
+@view-transition {
+    navigation: auto;
+}
+
 
 *,
 *::before,
@@ -696,6 +700,12 @@ section {
         transition-duration: 0.01ms !important;
         animation-duration: 0.01ms !important;
         scroll-behavior: auto !important;
+    }
+
+    ::view-transition-group(*),
+    ::view-transition-old(*),
+    ::view-transition-new(*) {
+        animation-duration: 0.01ms !important;
     }
 }
 

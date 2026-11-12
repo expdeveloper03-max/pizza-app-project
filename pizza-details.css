@@ -231,6 +231,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    flex-wrap: wrap;
     gap: 16px;
     padding-top: 18px;
     border-top: 1px solid var(--border);
@@ -246,6 +247,37 @@
     display: block;
     color: var(--brand-dark);
     font-size: 24px;
+}
+
+.order-actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.quantity-control {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    color: var(--ink);
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.quantity-control input {
+    width: 68px;
+    min-height: 46px;
+    padding: 8px;
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    background: var(--surface);
+    color: var(--text);
+    font: inherit;
+}
+
+.quantity-control input:focus-visible {
+    outline: 3px solid var(--tomato);
+    outline-offset: 2px;
 }
 
 .add-pizza-button {
@@ -321,5 +353,18 @@
 
     .order-submit {
         align-items: flex-end;
+    }
+
+    .order-actions {
+        gap: 8px;
+    }
+
+    .quantity-control input {
+        width: 60px;
+    }
+
+    .order-actions .add-pizza-button {
+        padding-right: 15px;
+        padding-left: 15px;
     }
 }

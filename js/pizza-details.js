@@ -117,6 +117,7 @@ if (pizza) {
     const form = document.getElementById("pizza-order-form");
     const priceOutput = document.getElementById("pizza-price");
     const orderMessage = document.getElementById("order-message");
+    const quantityInput = document.getElementById("pizza-quantity");
     const sizePrices = { XS: 20, M: 30, L: 40, XL: 50 };
     const extraPrice = 3;
     const premiumCrustPrice = 5;
@@ -126,20 +127,27 @@ if (pizza) {
         const extras = form.querySelectorAll('input[name="extra"]:checked').length;
         const premiumCrust = form.elements.namedItem("crust").value !== "Original";
 
-        return sizePrices[size] + extras * extraPrice + (premiumCrust ? premiumCrustPrice : 0);
+        const unitPrice = sizePrices[size] + extras * extraPrice + (premiumCrust ? premiumCrustPrice : 0);
+        return unitPrice * Number(quantityInput.value);
     };
 
     const updatePrice = () => {
+        if (!quantityInput.validity.valid) {
+            return;
+        }
+
         priceOutput.textContent = `GH₵${getTotal()}`;
         orderMessage.textContent = "";
     };
 
     form.addEventListener("change", updatePrice);
+    quantityInput.addEventListener("input", updatePrice);
     form.addEventListener("submit", (event) => {
         event.preventDefault();
 
         const order = {
             pizza: pizza.name,
+            quantity: Number(quantityInput.value),
             size: form.elements.namedItem("size").value,
             dough: form.elements.namedItem("dough").value,
             crust: form.elements.namedItem("crust").value,
